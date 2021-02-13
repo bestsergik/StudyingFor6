@@ -25,7 +25,7 @@
 
         <!--<Frame x:Name="Menu"/>-->
 
-        <Button Grid.Row="1" Grid.Column="1"  x:Name="btnMat"  Style="{StaticResource OrangeButton}"  Margin="16"   >Математика</Button>
+        <Button Grid.Row="1" Grid.Column="1"  x:Name="btnMathematics"  Style="{StaticResource OrangeButton}"  Margin="16" Click="btnMathematics_Click"   >Математика</Button>
         <Button Grid.Row="1" Grid.Column="2" x:Name="btnRus"    Style="{StaticResource OrangeButton}"    Margin="16"    >Русский</Button>
         <Button Grid.Row="2" Grid.Column="1" x:Name="btnEng"     Style="{StaticResource OrangeButton}"  Margin="16"    >Английский</Button>
         <Button Grid.Row="2" Grid.Column="2" x:Name="btnGames"   Style="{StaticResource OrangeButton}"   Margin="16">Игры</Button>

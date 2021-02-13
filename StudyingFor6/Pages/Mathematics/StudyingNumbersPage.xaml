@@ -1,0 +1,54 @@
+﻿<Page x:Class="StudyingFor6.Pages.Mathematics.StudyingNumbersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Mathematics"
+      mc:Ignorable="d" 
+      Title="StudyingNumbersPage">
+
+    <Grid x:Name="StudyingNumbers_Page">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="1" Style="{StaticResource TitlesPages}" Content="Учим числа" />
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="playNmber" Grid.Column="1" Command="{Binding PlayNumberCommand}"  Style="{StaticResource OrangeButton}" Content="{Binding RandomNumber}"/>
+            <Button x:Name="btnNextNumber" Grid.Column="2"  Style="{StaticResource OrangeButton}" Command="{Binding NextNumberCommand}"  Width="auto" Height="auto"    >
+                <WrapPanel >
+                    <Image Source="nextRandomNumber.png"  Stretch="Uniform" />
+                </WrapPanel>
+            </Button>
+        </Grid>
+
+
+        <Button  x:Name="btnTen"  Grid.Row="4" Grid.Column="1" Visibility="{Binding IsVisibleBtnRange}" Command="{Binding DefineRangeCommand}" CommandParameter="10" Style="{StaticResource OrangeButton}" Content="0-10"/>
+        <Button  x:Name="btnTwenty"  Grid.Row="4" Grid.Column="2" Visibility="{Binding IsVisibleBtnRange}" Command="{Binding DefineRangeCommand}" CommandParameter="19" Style="{StaticResource OrangeButton}" Content="11-19"/>
+        <Button  x:Name="btnHundred" Grid.Row="4" Grid.Column="3" Command="{Binding DefineRangeCommand}" CommandParameter="99" Style="{StaticResource OrangeButton}" Content="20-99"/>
+        <Button  x:Name="btnThousand" Grid.Row="5" Grid.Column="1" Command="{Binding DefineRangeCommand}" CommandParameter="999" Style="{StaticResource OrangeButton}" Content="100-999"/>
+        <Button  x:Name="btnTenThousand" Grid.Row="5" Grid.Column="2" Command="{Binding DefineRangeCommand}" CommandParameter="9999" Style="{StaticResource OrangeButton}" Content="1000-9999"/>
+        <Button  x:Name="btnUserRange" Grid.Row="5" Grid.Column="3" Command="{Binding DefineRangeCommand}" CommandParameter="{Binding ElementName=btnUserRange,Path=Content}" Style="{StaticResource OrangeButton}" Content="Введите свой диапозон"/>
+    </Grid>
+</Page>

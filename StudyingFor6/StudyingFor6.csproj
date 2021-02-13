@@ -71,6 +71,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Mathematics\StudyingNumbersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Menu\CommonMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +105,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Mathematics\StudyingNumbersPage.xaml.cs">
+      <DependentUpon>StudyingNumbersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Menu\CommonMenu.xaml.cs">
       <DependentUpon>CommonMenu.xaml</DependentUpon>
     </Compile>
@@ -149,11 +156,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Games\" />
-    <Folder Include="Pages\Mathematics\" />
     <Folder Include="Pages\Russion\" />
+    <Folder Include="Pages\Tasks\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Other\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Mathematics\nextRandomNumber.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

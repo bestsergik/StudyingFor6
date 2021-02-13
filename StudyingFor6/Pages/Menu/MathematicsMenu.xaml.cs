@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using StudyingFor6.Pages.Mathematics;
 
 namespace StudyingFor6.Pages.Menu
 {
@@ -28,6 +29,11 @@ namespace StudyingFor6.Pages.Menu
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.GoBack();
+        }
+
+        private void btnStudyingNumbers_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new StudyingNumbersPage());
         }
     }
 }

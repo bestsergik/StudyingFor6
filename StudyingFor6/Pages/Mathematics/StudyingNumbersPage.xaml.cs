@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StudyingFor6.Pages.Menu
+namespace StudyingFor6.Pages.Mathematics
 {
     /// <summary>
-    /// Логика взаимодействия для CommonMenu.xaml
+    /// Логика взаимодействия для StudyingNumbers_Page.xaml
     /// </summary>
-    public partial class CommonMenu : Page
+    public partial class StudyingNumbersPage : Page
     {
-        public CommonMenu()
+        public StudyingNumbersPage()
         {
             InitializeComponent();
-        }
-
-        private void btnMathematics_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new MathematicsMenu());
         }
     }
 }
