@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StudyingFor6.Pages.Other;
 using StudyingFor6.Pages.UserControls;
+using StudyingFor6.Pages.Menu;
 
 namespace StudyingFor6
 {
@@ -27,6 +28,11 @@ namespace StudyingFor6
             InitializeComponent();
             MainFrame.NavigationService.Navigate(new LogoPage());
             ClockFrame.NavigationService.Navigate(new Clock());
+        }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new CommonMenu());
         }
     }
 }

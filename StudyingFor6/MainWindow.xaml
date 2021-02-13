@@ -41,9 +41,9 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Width="50" Height="50" x:Name="btnHome" Style="{StaticResource OrangeButton}"  >
+                <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Width="50" Height="50" x:Name="btnHome" Style="{StaticResource OrangeButton}"  Click="btnHome_Click" >
                     <WrapPanel >
-                        <!--<Image Grid.Row="0" Grid.Column="1" Source="home.png"  />-->
+                        <Image Grid.Row="0" Grid.Column="1" Source="home.png"  />
                     </WrapPanel>
                 </Button>
                 <Button Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" Width="50" Height="50" x:Name="btnMainSetting" Style="{StaticResource OrangeButton}" >

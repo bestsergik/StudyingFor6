@@ -12,16 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using StudyingFor6.Pages.Games;
 
 namespace StudyingFor6.Pages.Menu
 {
     /// <summary>
-    /// Логика взаимодействия для GamesMenu.xaml
+    /// Логика взаимодействия для TasksMenu.xaml
     /// </summary>
-    public partial class GamesMenu : Page
+    public partial class TasksMenu : Page
     {
-        public GamesMenu()
+        public TasksMenu()
         {
             InitializeComponent();
         }
@@ -29,11 +28,6 @@ namespace StudyingFor6.Pages.Menu
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.GoBack();
-        }
-
-        private void btnExamples_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new FifteenPage());
         }
     }
 }

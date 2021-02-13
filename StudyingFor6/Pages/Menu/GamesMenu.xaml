@@ -24,7 +24,7 @@
 
         <Label Style="{StaticResource TitlesPages}" Content="Игры" />
 
-        <Button x:Name="btnExamples" Grid.Row="1" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Пятнашки"/>
+        <Button x:Name="btnExamples" Grid.Row="1" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Пятнашки" Click="btnExamples_Click"/>
         <Button x:Name="btnTasks"    Grid.Row="2" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Пазлы"/>
         <Button x:Name="btnBack"     Grid.Row="4" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Назад" Click="btnBack_Click"    />
     </Grid>

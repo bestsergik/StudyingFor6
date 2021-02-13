@@ -35,5 +35,11 @@ namespace StudyingFor6.Pages.Menu
         {
             this.NavigationService.Navigate(new StudyingNumbersPage());
         }
+
+        private void btnExamples_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ExamplesPage());
+
+        }
     }
 }

@@ -29,5 +29,29 @@ namespace StudyingFor6.Pages.Menu
         {
             this.NavigationService.Navigate(new MathematicsMenu());
         }
+
+        private void btnGames_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new GamesMenu());
+
+        }
+
+        private void btnTasks_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new TasksMenu());
+
+        }
+
+        private void btnRus_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RussionMenu());
+
+        }
+
+        private void btnEng_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new EnglishMenu());
+
+        }
     }
 }

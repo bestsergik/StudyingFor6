@@ -4,12 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:StudyingFor6.Pages.Mathematics"
+      xmlns:VM="clr-namespace:StudyingFor6.ViewModels"
       mc:Ignorable="d" 
       Title="StudyingNumbersPage">
-
+    <Page.DataContext>
+        <VM:StudyingNumbers_VM></VM:StudyingNumbers_VM>
+    </Page.DataContext>
     <Grid x:Name="StudyingNumbers_Page">
-
-
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
@@ -42,7 +43,6 @@
                 </WrapPanel>
             </Button>
         </Grid>
-
 
         <Button  x:Name="btnTen"  Grid.Row="4" Grid.Column="1" Visibility="{Binding IsVisibleBtnRange}" Command="{Binding DefineRangeCommand}" CommandParameter="10" Style="{StaticResource OrangeButton}" Content="0-10"/>
         <Button  x:Name="btnTwenty"  Grid.Row="4" Grid.Column="2" Visibility="{Binding IsVisibleBtnRange}" Command="{Binding DefineRangeCommand}" CommandParameter="19" Style="{StaticResource OrangeButton}" Content="11-19"/>

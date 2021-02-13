@@ -1,10 +1,12 @@
 ﻿<Application x:Class="StudyingFor6.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:StudyingFor6.ViewModels"
              xmlns:local="clr-namespace:StudyingFor6"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <ViewModels:Example_VM x:Key="ExampleVM "/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="MainDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>

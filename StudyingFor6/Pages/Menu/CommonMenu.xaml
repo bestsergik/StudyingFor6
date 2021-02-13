@@ -26,9 +26,9 @@
         <!--<Frame x:Name="Menu"/>-->
 
         <Button Grid.Row="1" Grid.Column="1"  x:Name="btnMathematics"  Style="{StaticResource OrangeButton}"  Margin="16" Click="btnMathematics_Click"   >Математика</Button>
-        <Button Grid.Row="1" Grid.Column="2" x:Name="btnRus"    Style="{StaticResource OrangeButton}"    Margin="16"    >Русский</Button>
-        <Button Grid.Row="2" Grid.Column="1" x:Name="btnEng"     Style="{StaticResource OrangeButton}"  Margin="16"    >Английский</Button>
-        <Button Grid.Row="2" Grid.Column="2" x:Name="btnGames"   Style="{StaticResource OrangeButton}"   Margin="16">Игры</Button>
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="btnTasks"   Style="{StaticResource OrangeButton}"  Margin="16" >Задачи</Button>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="btnRus"    Style="{StaticResource OrangeButton}"    Margin="16" Click="btnRus_Click"    >Русский</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnEng"     Style="{StaticResource OrangeButton}"  Margin="16" Click="btnEng_Click"    >Английский</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="btnGames"   Style="{StaticResource OrangeButton}"   Margin="16" Click="btnGames_Click">Игры</Button>
+        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="btnTasks"   Style="{StaticResource OrangeButton}"  Margin="16" Click="btnTasks_Click" >Задачи</Button>
     </Grid>
 </Page>

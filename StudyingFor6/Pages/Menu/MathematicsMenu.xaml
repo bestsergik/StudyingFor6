@@ -24,7 +24,7 @@
 
         <Label Style="{StaticResource TitlesPages}" Content="Математика" />
 
-        <Button x:Name="btnExamples"      Grid.Row="1" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Примеры"/>
+        <Button x:Name="btnExamples"      Grid.Row="1" Grid.Column="1"      Style="{StaticResource OrangeButton}" Content="Примеры" Click="btnExamples_Click"/>
         <Button x:Name="btnTasks"         Grid.Row="2" Grid.Column="1"       Style="{StaticResource OrangeButton}" Content="Задачи"/>
         <Button x:Name="btnStudyingNumbers" Grid.Row="3" Grid.Column="1"       Style="{StaticResource OrangeButton}" Content="Учим числа" Click="btnStudyingNumbers_Click"/>
         <Button x:Name="btnBack"          Grid.Row="4" Grid.Column="1"       Style="{StaticResource OrangeButton}" Content="Назад" Click="btnBack_Click"/>
