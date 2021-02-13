@@ -1,0 +1,26 @@
+﻿<Page x:Class="StudyingFor6.Pages.Other.LogoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Other"
+      mc:Ignorable="d" 
+      Title="LogoPage">
+
+    <Grid x:Name="Logo" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="2" Grid.Column="1" Width="270"   x:Name="btnEntry" Style="{StaticResource OrangeButton}" Content="Начать" Click="btnEntry_Click" />
+        <Image Grid.Row="1" Grid.Column="1" Source="logo.png"   />
+    </Grid>
+</Page>

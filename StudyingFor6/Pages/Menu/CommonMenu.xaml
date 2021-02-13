@@ -1,0 +1,34 @@
+﻿<Page x:Class="StudyingFor6.Pages.Menu.CommonMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Menu"
+      mc:Ignorable="d" 
+      Title="CommonMenu">
+
+    <Grid x:Name="Common_Menu"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Style="{StaticResource TitlesPages}" Content="Главное меню" />
+
+        <!--<Frame x:Name="Menu"/>-->
+
+        <Button Grid.Row="1" Grid.Column="1"  x:Name="btnMat"  Style="{StaticResource OrangeButton}"  Margin="16"   >Математика</Button>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="btnRus"    Style="{StaticResource OrangeButton}"    Margin="16"    >Русский</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btnEng"     Style="{StaticResource OrangeButton}"  Margin="16"    >Английский</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="btnGames"   Style="{StaticResource OrangeButton}"   Margin="16">Игры</Button>
+        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="btnTasks"   Style="{StaticResource OrangeButton}"  Margin="16" >Задачи</Button>
+    </Grid>
+</Page>
