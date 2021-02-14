@@ -1,0 +1,30 @@
+﻿<Page x:Class="StudyingFor6.Pages.Tasks.MathematicsTasksPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Tasks"
+      mc:Ignorable="d" 
+      Title="MathematicsTasksPage">
+
+    <Grid x:Name="MathematicsTasks_Page" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Margin="10,0,0,20" Grid.Column="1" Grid.Row="5" x:Name="btnNextExample" IsEnabled="{Binding IsSkipExample}"  Style="{StaticResource OrangeButton}" Command="{Binding NextExample}" Content="Пропустить" />
+        <Button Margin="10,0,0,20" x:Name="btnBack"  Grid.Row="5"   Style="{StaticResource OrangeButton}" Content="Назад" Click="btnBack_Click" />
+        <Button Margin="10,0,0,20" x:Name="btnSetting" Grid.Row="5" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="Настройки"  />
+        <Label Style="{StaticResource TitlesPages}"  Content="Примеры" />
+        <Button Grid.Row="1" Grid.Column="1"></Button>
+    </Grid>
+</Page>

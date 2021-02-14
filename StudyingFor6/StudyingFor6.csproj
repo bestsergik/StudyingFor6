@@ -65,8 +65,14 @@
     <Compile Include="Pages\Menu\TasksMenu.xaml.cs">
       <DependentUpon>TasksMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Tasks\MathematicsTasksPage.xaml.cs">
+      <DependentUpon>MathematicsTasksPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="UserControls\TimerControl.xaml.cs">
+      <DependentUpon>TimerControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Example_VM.cs" />
     <Compile Include="ViewModels\StudyingNumbers_VM.cs" />
     <Page Include="MainDictionary.xaml">
@@ -129,7 +135,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\UserControls\Clock.xaml">
+    <Page Include="Pages\Tasks\MathematicsTasksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Clock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TimerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +176,7 @@
     <Compile Include="Pages\Other\LogoPage.xaml.cs">
       <DependentUpon>LogoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\UserControls\Clock.xaml.cs">
+    <Compile Include="UserControls\Clock.xaml.cs">
       <DependentUpon>Clock.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -192,7 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Russion\" />
-    <Folder Include="Pages\Tasks\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Other\logo.png" />
@@ -202,6 +215,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="settingIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="settingIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mainLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

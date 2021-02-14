@@ -26,7 +26,7 @@
         <Button Grid.Row="2" Margin="0,0,10,20" Grid.Column="2"  x:Name="btnApplyChangeFinalResult" Style="{StaticResource OrangeButton}" Command="{Binding ChangeSetting}" Content="Применить"   Click="btnApplyChangeFinalResult_Click"  />
         <Button Grid.Row="2" Margin="10,0,0,20"  Grid.Column="0"  x:Name="btnCancelChangeFinalResult" Style="{StaticResource OrangeButton}"  Content="Отмена" Click="btnCancelChangeFinalResult_Click"  />
 
-        <TabControl Background="Linen" Margin="10,10,10,30" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Gainsboro">
+        <TabControl  Margin="10,10,10,30" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Gainsboro">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="FontSize" Value="18"></Setter>
@@ -71,7 +71,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="Gray" Opacity="0.5"/>
                         </Border.BorderBrush>
-                        <Grid    Background="GhostWhite">
+                        <Grid Background="Linen">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="0.8*"></RowDefinition>
                                 <RowDefinition></RowDefinition>
@@ -92,7 +92,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="Gray" Opacity="0.5"/>
                         </Border.BorderBrush>
-                        <Grid Background="GhostWhite" >
+                        <Grid Background="Linen" >
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                                 <RowDefinition></RowDefinition>
@@ -107,10 +107,10 @@
                             </Grid.ColumnDefinitions>
                             <Label Style="{StaticResource TitlesFieldsPages}" Grid.ColumnSpan="3" Content="Выбор арифметических действий" />
                             <Rectangle HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top"  Fill="Gray" Height="1"/>
-                            <CheckBox Style="{StaticResource ExampleSetting}"   x:Name="CheckMulti" Grid.Row="1" Grid.Column="1" Content="Деление"  IsChecked="{Binding IsMultiplication}" IsEnabled="{Binding IsEnableMultiplication}" ></CheckBox>
-                            <CheckBox Style="{StaticResource ExampleSetting}"   Grid.Row="1" Grid.Column="2" x:Name="CheckDivision" Content="Умножение" IsChecked="{Binding IsDivision}" IsEnabled="{Binding IsEnableDivision}" ></CheckBox>
-                            <CheckBox Style="{StaticResource ExampleSetting}"    Grid.Row="2" Grid.Column="1" x:Name="CheckAddition" Content="Сложение" IsChecked="{Binding IsAddition}" IsEnabled="{Binding IsEnableAddition}" ></CheckBox>
-                            <CheckBox Style="{StaticResource ExampleSetting}"   Grid.Row="2" Grid.Column="2"  x:Name="CheckSubtraction" Content="Вычитание"   IsChecked="{Binding IsSubtraction}" IsEnabled="{Binding IsEnableSubtraction}" ></CheckBox>
+                            <CheckBox Style="{StaticResource ExampleSetting}"  x:Name="CheckMulti" Grid.Row="1" Grid.Column="1" Content="Деление"  IsChecked="{Binding IsMultiplication}" IsEnabled="{Binding IsEnableMultiplication}" ></CheckBox>
+                            <CheckBox Style="{StaticResource ExampleSetting}"  Grid.Row="1" Grid.Column="2" x:Name="CheckDivision" Content="Умножение" IsChecked="{Binding IsDivision}" IsEnabled="{Binding IsEnableDivision}" ></CheckBox>
+                            <CheckBox Style="{StaticResource ExampleSetting}"  Grid.Row="2" Grid.Column="1" x:Name="CheckAddition" Content="Сложение" IsChecked="{Binding IsAddition}" IsEnabled="{Binding IsEnableAddition}" ></CheckBox>
+                            <CheckBox Style="{StaticResource ExampleSetting}"  Grid.Row="2" Grid.Column="2"  x:Name="CheckSubtraction" Content="Вычитание"   IsChecked="{Binding IsSubtraction}" IsEnabled="{Binding IsEnableSubtraction}" ></CheckBox>
                             <CheckBox Style="{StaticResource ExampleSetting}"  Margin="0,10,0,0"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" x:Name="CheckRandomActions" Content="Случайный набор и количество действий"  IsChecked="{Binding IsRandomFlags}"></CheckBox>
                         </Grid>
                     </Border>
@@ -118,7 +118,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="Gray" Opacity="0.5"/>
                         </Border.BorderBrush>
-                        <Grid Background="GhostWhite">
+                        <Grid Background="Linen">
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                                 <RowDefinition></RowDefinition>
@@ -151,7 +151,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="Gray" Opacity="0.5"/>
                         </Border.BorderBrush>
-                        <Grid  Background="GhostWhite">
+                        <Grid  Background="Linen">
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                                 <RowDefinition></RowDefinition>
@@ -171,6 +171,46 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Режимы"  >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="0.4*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border  BorderThickness="1" CornerRadius="4" Margin="4" Grid.Row="0" Grid.Column="1">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                        </Border.BorderBrush>
+                        <Grid    Background="GhostWhite">
+                         </Grid>
+                    </Border>
+                    <Border  BorderThickness="1" CornerRadius="4" Margin="4" Grid.Row="0" Grid.Column="0">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                        </Border.BorderBrush>
+                        <Grid Background="GhostWhite" >
+                           </Grid>
+                    </Border>
+                    <Border  BorderThickness="1" CornerRadius="4" Margin="4" Grid.Row="0" Grid.Column="2">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                        </Border.BorderBrush>
+                        <Grid Background="GhostWhite">
+                            </Grid>
+                    </Border>
+                    <Border  BorderThickness="1" CornerRadius="4" Margin="4" Grid.Row="0" Grid.Column="3">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                        </Border.BorderBrush>
+                        <Grid  Background="GhostWhite">
+                             </Grid>
+                    </Border>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

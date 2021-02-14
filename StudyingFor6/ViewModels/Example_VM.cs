@@ -42,6 +42,8 @@ namespace StudyingFor6.ViewModels
         private string _action2;
         private string _action3;
 
+        private string _userInput;
+
         private int _maxPossibleResult = 9;
         private int _minPossibleResult = 0;
         private int _quantityActions;
@@ -51,14 +53,10 @@ namespace StudyingFor6.ViewModels
         private int _positionEqual;
         private int _positionResult;
 
-        private string _userInput;
-
-
         private Visibility _isVisibleSecondAction;
         private Visibility _isVisibleThirdNumber;
         private Visibility _isVisibleThirdAction;
         private Visibility _isVisibleFourthNumber;
-
 
         private bool _isAddition;
         private bool _isSubtraction;
@@ -101,24 +99,12 @@ namespace StudyingFor6.ViewModels
         #endregion
 
         #region Methods
-        /// <summary>
-        /// Inserting numbers and actions in view model
-        /// </summary>
-
 
         void GetExample()
         {
-            //CheckFlags();
             numbersAndActions = exampleBuilding.GetExample(QuantityActions, CheckBoxes, MinPossibleResult, MaxPossibleResult, IsZero);
             CheckVisibleNumbersAndActions();
             FillExample();
-        }
-
-        private void CheckFlags()
-        {
-
-
-
         }
 
         private void FillExample()
@@ -144,9 +130,7 @@ namespace StudyingFor6.ViewModels
                 MaxPossibleResult = 5;
                 MinPossibleResult = 0;
             }
-            // MaxPossibleResult = example.NegativeResult(IsNegativeResult, MaxPossibleResult);
         }
-
 
         private void CheckUserInput()
         {
@@ -184,7 +168,6 @@ namespace StudyingFor6.ViewModels
                     break;
             }
         }
-
 
         void GetNextExample()
         {
@@ -491,7 +474,6 @@ namespace StudyingFor6.ViewModels
             }
         }
 
-
         public bool IsEnableDivision
         {
             get { return _isEnableDivision; }
@@ -518,7 +500,6 @@ namespace StudyingFor6.ViewModels
             }
         }
 
-
         public Visibility IsVisibleThirdNumber
         {
             get { return _isVisibleThirdNumber; }
@@ -538,7 +519,6 @@ namespace StudyingFor6.ViewModels
                 OnPropertyChanged("IsVisibleThirdAction");
             }
         }
-
 
         public Visibility IsVisibleFourthNumber
         {
@@ -576,8 +556,6 @@ namespace StudyingFor6.ViewModels
             }
         }
 
-
-
         public int PositionEqual
         {
             get { return _positionEqual; }
@@ -588,8 +566,6 @@ namespace StudyingFor6.ViewModels
             }
         }
 
-
-
         public int PositionResult
         {
             get { return _positionResult; }
@@ -599,7 +575,6 @@ namespace StudyingFor6.ViewModels
                 OnPropertyChanged("PositionResult");
             }
         }
-
 
         public int MinPossibleResult
         {
@@ -663,7 +638,6 @@ namespace StudyingFor6.ViewModels
             }
         }
 
-
         #endregion
 
 
@@ -705,8 +679,6 @@ namespace StudyingFor6.ViewModels
             IsRandomFlags = false;
         }
 
-
-
         private void ReduceAction(object sender)
         {
             QuantityActions = example.ChangeQuantiteAction(0, _quantityActions);
@@ -721,7 +693,5 @@ namespace StudyingFor6.ViewModels
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
-
-
     }
 }

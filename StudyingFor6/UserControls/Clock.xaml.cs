@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace StudyingFor6.Pages.UserControls
+namespace StudyingFor6.UserControls
 {
     /// <summary>
     /// Логика взаимодействия для Clock.xaml

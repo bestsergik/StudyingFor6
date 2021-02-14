@@ -24,7 +24,7 @@
         <Label Style="{StaticResource TitlesPages}" Content="Задачи" />
 
         <Frame  x:Name="Menu"/>
-        <Button Grid.Row="1" Grid.Column="1" x:Name="btnMathematicsTasks"         Style="{StaticResource OrangeButton}" Content="Математические"/>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="btnMathematicsTasks"         Style="{StaticResource OrangeButton}" Content="Математические" Click="btnMathematicsTasks_Click"/>
         <Button Grid.Row="2" Grid.Column="1"  x:Name="btnLogicTasks"  Style="{StaticResource OrangeButton}" Content="Логические"  />
         <Button Grid.Row="3" Grid.Column="1"  x:Name="btnAnotherTasks"        Style="{StaticResource OrangeButton}" Content="Прочие"   />
         <Button Grid.Row="4" Grid.Column="1"  x:Name="btnBack"            Style="{StaticResource OrangeButton}" Content="Назад"   Click="btnBack_Click"  />

@@ -10,9 +10,6 @@ namespace StudyingFor6.Models
     {
         Random random = new Random();
 
-        /// <summary>
-        /// Default Data
-        /// </summary>
         string[] example;
         int?[] numbers;
         int?[] resultBlock;
@@ -41,13 +38,6 @@ namespace StudyingFor6.Models
             SelectionValues();
             ConstructBlocks();
             ConvertToString();
-            Console.WriteLine(countDifferentOperations);
-            Console.WriteLine(storedOperation);
-            Console.WriteLine(randomPositions);
-            //if(quantityOperations == 2 && example[5] == null)
-            //{
-            //    Console.WriteLine();
-            //}
             return example;
         }
 
@@ -138,13 +128,6 @@ namespace StudyingFor6.Models
         {
             if (randomPositions[0] == 2 && randomPositions[1] == 1 && randomPositions[2] == 0)
                 SetRandomPositionOperation();
-            //else if (incomingOperations[2] && incomingOperations[3])
-            //{
-            //    if (quantityOperations == 3) storedOperation = random.Next(2, 4);
-
-            //    if (randomPositions[0] == 1 && randomPositions[1] == 0 && randomPositions[2] == 2)
-            //        SetRandomPositionOperation();
-            //}
             else if (incomingOperations[2] && incomingOperations[3] && countDifferentOperations != 3)
             {
                 if (quantityOperations == 3) storedOperation = random.Next(2, 4);
@@ -169,12 +152,6 @@ namespace StudyingFor6.Models
                 if (quantityOperations == 2 && (randomPositions[0] == 2 || randomPositions[1] == 2))
                     SetRandomPositionOperation();
             }
-            //else if (quantityOperations == 3 && countDifferentOperations == 2)
-            //{
-            //    storedOperation = random.Next(0, 2);
-            //    if ((randomPositions[0] == 1 && randomPositions[1] == 2 && randomPositions[2] == 0) || (randomPositions[0] == 0 && randomPositions[1] == 2 && randomPositions[2] == 1))
-            //        SetRandomPositionOperation();
-            //}
             if (quantityOperations == 2 && (randomPositions[0] == 2 || randomPositions[1] == 2))
                 SetRandomPositionOperation();
         }
@@ -215,8 +192,6 @@ namespace StudyingFor6.Models
             if (tryAgain == true) TryAgain();
             CheckResult();
         }
-
-
 
         private int SetTakeOffFlag(int counterOperations)
         {

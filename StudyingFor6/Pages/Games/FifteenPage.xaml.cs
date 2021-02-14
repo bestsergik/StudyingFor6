@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StudyingFor6.Models;
+using StudyingFor6.UserControls;
 
 namespace StudyingFor6.Pages.Games
 {
@@ -21,13 +22,19 @@ namespace StudyingFor6.Pages.Games
     /// </summary>
     public partial class FifteenPage : Page
     {
+        bool isFirstStep = true;
+        int counterSteps = 0;
+        int bestResult = Int32.MaxValue;
+        long bestTime = Int32.MaxValue;
+
+        TimerControl timerControl = new TimerControl();
         Fifteen_Model fifteen_model = new Fifteen_Model();
         public FifteenPage()
         {
             InitializeComponent();
             FillRandomNumbers();
+            Timer.NavigationService.Navigate(timerControl);
         }
-
 
         void FillRandomNumbers()
         {
@@ -47,6 +54,12 @@ namespace StudyingFor6.Pages.Games
 
         private void MoveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (isFirstStep)
+            {
+                timerControl.RefreshTimer();
+                isFirstStep = false;
+            }
+
             int pressedButton = (int)((Button)e.OriginalSource).Content;
             if (fifteen_model.CheckMoveButton(pressedButton))
             {
@@ -61,16 +74,41 @@ namespace StudyingFor6.Pages.Games
                     }
                 }
                 ((Button)e.OriginalSource).Content = "16";
+                counterSteps++;
+                Steps.Content = counterSteps.ToString();
             }
             if (fifteen_model.CompareFifteens())
             {
+                if (counterSteps < bestResult)
+                {
+                    bestResult = counterSteps;
+                    Result.Content = counterSteps;
+                }
+                if (timerControl.GetCurrentCounterTime() < bestTime)
+                {
+                    qwd = 0;
+                    bestTime = timerControl.GetCurrentCounterTime();
+                    Time.Content = timerControl.GetCurrentTime().ToString("mm\\:ss");
+                }
+                   
+                StopGame();
                 MessageBox.Show("Ура! Победа");
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Refresh_Click(object sender, RoutedEventArgs e)
         {
+            Steps.Content = 0;
+            StopGame();
+            timerControl.ResetTimer();
             FillRandomNumbers();
+        }
+
+        private void StopGame()
+        {
+            counterSteps = 0;
+            timerControl.StopTimer();
+            isFirstStep = true;
         }
     }
 }

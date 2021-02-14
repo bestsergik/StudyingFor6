@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StudyingFor6.Pages.Other;
-using StudyingFor6.Pages.UserControls;
+using StudyingFor6.UserControls;
 using StudyingFor6.Pages.Menu;
 
 namespace StudyingFor6
