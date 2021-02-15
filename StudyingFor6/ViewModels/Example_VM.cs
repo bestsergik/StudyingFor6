@@ -13,7 +13,7 @@ namespace StudyingFor6.ViewModels
 {
 
 
-    class Example_VM : INotifyPropertyChanged
+    public class Example_VM : INotifyPropertyChanged
     {
         #region Data
         Example_Model exampleBuilding = new Example_Model();
@@ -69,6 +69,7 @@ namespace StudyingFor6.ViewModels
 
         private bool _isSkipExample = true;
 
+        private bool _isEnableCheckZero = true;
         private bool _isEnableAddition = true;
         private bool _isEnableSubtraction = true;
         private bool _isEnableMultiplication = true;
@@ -380,7 +381,16 @@ namespace StudyingFor6.ViewModels
             {
                 _isNegativeResult = value;
                 OnPropertyChanged("IsNegativeResult");
-                IsZero = false;
+                if(IsNegativeResult)
+                {
+                    IsEnableCheckZero = false;
+                    IsZero = false;
+                }
+                else
+                {
+                    IsEnableCheckZero = true;
+                }
+                
                 SettingNegativeResult();
             }
         }
@@ -425,6 +435,16 @@ namespace StudyingFor6.ViewModels
                 _isDivision = value;
                 OnPropertyChanged("IsDivision");
                 SettingCheckBoxes();
+            }
+        }
+
+        public bool IsEnableCheckZero
+        {
+            get { return _isEnableCheckZero; }
+            set
+            {
+                _isEnableCheckZero = value;
+                OnPropertyChanged("IsEnableCheckZero");
             }
         }
 
@@ -529,6 +549,8 @@ namespace StudyingFor6.ViewModels
                 OnPropertyChanged("IsVisibleFourthNumber");
             }
         }
+
+       
 
         #endregion
 

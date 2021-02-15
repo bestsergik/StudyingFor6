@@ -6,10 +6,10 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <ViewModels:Example_VM x:Key="ExampleVM "/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="MainDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <ViewModels:Example_VM x:Key="ExampleVM"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

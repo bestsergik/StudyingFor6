@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace StudyingFor6.Models
 {
-    class SettingExamle_Model
+   public class SettingExamle_Model
     {
         Random random = new Random();
         bool[] CheckBoxResult;

@@ -86,7 +86,6 @@ namespace StudyingFor6.Pages.Games
                 }
                 if (timerControl.GetCurrentCounterTime() < bestTime)
                 {
-                    qwd = 0;
                     bestTime = timerControl.GetCurrentCounterTime();
                     Time.Content = timerControl.GetCurrentTime().ToString("mm\\:ss");
                 }
@@ -109,6 +108,11 @@ namespace StudyingFor6.Pages.Games
             counterSteps = 0;
             timerControl.StopTimer();
             isFirstStep = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
         }
     }
 }

@@ -5,11 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:StudyingFor6.Pages.Mathematics"
       xmlns:VM="clr-namespace:StudyingFor6.ViewModels"
+      DataContext="{StaticResource ExampleVM}"
       mc:Ignorable="d" 
       Title="ExamplesPage">
-    <Page.DataContext>
-        <VM:Example_VM></VM:Example_VM>
-    </Page.DataContext>
+  
     
     <Grid x:Name="Examples_Page">
         <Grid>
