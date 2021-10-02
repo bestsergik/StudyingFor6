@@ -23,7 +23,6 @@ namespace StudyingFor6.UserControls
     /// </summary>
     public partial class TimerControl : UserControl
     {
-        
         long counter = 0;
         DispatcherTimer timer;
         public TimerControl()

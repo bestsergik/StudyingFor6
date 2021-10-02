@@ -41,7 +41,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="1"   Style="{StaticResource TitlesFieldsPages}">Затраченное время:</Label>
-                        <Frame  Grid.Column="2" x:Name="Timer"></Frame>
+                        <Frame VerticalAlignment="Center"  Grid.Column="2" x:Name="Timer"></Frame>
                         <Label  HorizontalAlignment="Right" Grid.Column="3" Style="{StaticResource TitlesFieldsPages}">Количество ходов:</Label>
                         <Label  Style="{StaticResource TitlesFieldsPages}" x:Name="Steps" Grid.Column="4" Content="0"></Label>
                     </Grid>
@@ -66,9 +66,9 @@
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="1"  Grid.ColumnSpan="2" Style="{StaticResource TitlesFieldsPages}">Лучшый резальтат:</Label>
                             <Label Grid.Row="2" HorizontalAlignment="Right" Style="{StaticResource TitlesFieldsPages}">Время:</Label>
-                            <Label Grid.Row="2" HorizontalAlignment="Left" Grid.Column="1" Style="{StaticResource TitlesFieldsPages}" x:Name="Time"  Content="0"></Label>
+                            <Label Grid.Row="2" HorizontalAlignment="Left" Grid.Column="1" Style="{StaticResource TitlesFieldsPages}" x:Name="Time"  Content="--:--"></Label>
                             <Label Grid.Row="3"  Style="{StaticResource TitlesFieldsPages}">Количество ходов:</Label>
-                            <Label Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3"  Style="{StaticResource TitlesFieldsPages}" x:Name="Result"  Content="0"></Label>
+                            <Label Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3"  Style="{StaticResource TitlesFieldsPages}" x:Name="Result"  Content="-"></Label>
 
                         </Grid>
 

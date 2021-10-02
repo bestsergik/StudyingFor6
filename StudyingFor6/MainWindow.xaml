@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudyingFor6"
         mc:Ignorable="d"
-         Title="Учусь на 6" MinHeight="768" MinWidth="1366"   WindowState="Maximized"  ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Title="Учусь на 6" MinHeight="768" MinWidth="1366"   WindowState="Maximized"  ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="90"></RowDefinition>

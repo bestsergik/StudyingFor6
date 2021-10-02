@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1r.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -70,6 +73,9 @@
     </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="UserControls\ExampleModeControl.xaml.cs">
+      <DependentUpon>ExampleModeControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TimerControl.xaml.cs">
       <DependentUpon>TimerControl.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Clock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ExampleModeControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="mainLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1r.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="StudyingFor6.UserControls.TimerControl"
+﻿<UserControl x:Class="StudyingFor6.UserControls.ExampleModeControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudyingFor6.UserControls"
              mc:Ignorable="d" >
-    <Grid >
-        <Label x:Name="timelbl"  Foreground="DarkSlateGray" FontSize="24" FontFamily="Stormfaze"  ContentStringFormat="HH:mm" />
+    <Grid>
+            
     </Grid>
 </UserControl>

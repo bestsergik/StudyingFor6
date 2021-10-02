@@ -54,8 +54,8 @@
                     <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Количество верных ответов:"  />
                     <Label Grid.Row="2" Grid.ColumnSpan="2" Content="Количество неверных ответов:"  />
                     <Label Grid.Row="3" Grid.ColumnSpan="2" Content="Количество пропущенных примеров:"  />
-                    <Button x:Name="btnCorrectAnswer"   Grid.Row="1" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="{Binding QuantityInCorrectAnswer}" />
-                    <Button x:Name="btnInCorrectAnswer" Grid.Row="2" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantityCorrectAnswer}" />
+                    <Button x:Name="btnCorrectAnswer"   Grid.Row="2" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="{Binding QuantityInCorrectAnswer}" />
+                    <Button x:Name="btnInCorrectAnswer" Grid.Row="1" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantityCorrectAnswer}" />
                     <Button x:Name="btnSkipExample"     Grid.Row="3" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantitySkipExample}"  />
                 </Grid>
             </Border>
