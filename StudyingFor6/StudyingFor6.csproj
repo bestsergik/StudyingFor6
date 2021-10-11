@@ -65,6 +65,18 @@
     <Compile Include="Pages\Games\FifteenPage.xaml.cs">
       <DependentUpon>FifteenPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Mathematics\Pages\InfoClassic.xaml.cs">
+      <DependentUpon>InfoClassic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mathematics\Pages\InfoMistakes.xaml.cs">
+      <DependentUpon>InfoMistakes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mathematics\Pages\InfoPoints.xaml.cs">
+      <DependentUpon>InfoPoints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mathematics\Pages\InfoTime.xaml.cs">
+      <DependentUpon>InfoTime.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Menu\TasksMenu.xaml.cs">
       <DependentUpon>TasksMenu.xaml</DependentUpon>
     </Compile>
@@ -102,6 +114,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Mathematics\ExamplesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Mathematics\Pages\InfoClassic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Mathematics\Pages\InfoMistakes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Mathematics\Pages\InfoPoints.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Mathematics\Pages\InfoTime.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Russion\" />
+    <Folder Include="ViewModels\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Other\logo.png" />

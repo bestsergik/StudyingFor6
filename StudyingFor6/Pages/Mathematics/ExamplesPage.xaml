@@ -8,8 +8,10 @@
       DataContext="{StaticResource ExampleVM}"
       mc:Ignorable="d" 
       Title="ExamplesPage">
-  
-    
+
+
+
+
     <Grid x:Name="Examples_Page">
         <Grid>
             <Grid.RowDefinitions>
@@ -37,7 +39,9 @@
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Gray" Opacity="0.5"/>
                 </Border.BorderBrush>
-                <Grid  Background="GhostWhite">
+
+                <Frame Name="Frame_info"></Frame>
+                <!--<Grid Name="InfoClassic"  Background="GhostWhite">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -57,8 +61,11 @@
                     <Button x:Name="btnCorrectAnswer"   Grid.Row="2" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="{Binding QuantityInCorrectAnswer}" />
                     <Button x:Name="btnInCorrectAnswer" Grid.Row="1" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantityCorrectAnswer}" />
                     <Button x:Name="btnSkipExample"     Grid.Row="3" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantitySkipExample}"  />
-                </Grid>
+                </Grid>-->
+
             </Border>
+            
+            
 
             <Border  BorderThickness="1" Grid.ColumnSpan="2" CornerRadius="4" Margin="4" Grid.Row="1" Grid.Column="1">
                 <Border.BorderBrush>
@@ -66,19 +73,25 @@
                 </Border.BorderBrush>
                 <Grid Background="GhostWhite" >
                     <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="0.5*"></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.01*"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.01*"></ColumnDefinition>
 
                     </Grid.ColumnDefinitions>
                     <Label Style="{StaticResource TitlesFieldsPages}"  Content="Режим"  Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="ModeClassic"   Grid.Row="1" Grid.Column="1" Style="{StaticResource OrangeButton}" Content="Классический" Command="{Binding SetMode}" CommandParameter="0" Click="ModeClassic_Click"/>
+                    <Button x:Name="ModeMistakes"   Grid.Row="1" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="На ошибки" Command="{Binding SetMode}" CommandParameter="1" Click="ModeMistakes_Click" />
+                    <Button x:Name="ModeTime"   Grid.Row="2" Grid.Column="1" Style="{StaticResource OrangeButton}" Content="На время" Command="{Binding SetMode}" CommandParameter="2" Click="ModeTime_Click" />
+                    <Button x:Name="ModePoints"   Grid.Row="2" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="На очки" Command="{Binding SetMode}" CommandParameter="3" Click="ModePoints_Click" />
+
+
                 </Grid>
             </Border>
 
@@ -110,7 +123,7 @@
 
                     <Label Style="{StaticResource TitlesFieldsPages}"  Content="Пример"  Grid.ColumnSpan="2"/>
 
-                    <Button Grid.Row="1" Grid.Column="1" x:Name="btnValue1"  Style="{StaticResource ExampleButton}" Content="{Binding Number1}"  />
+                    <Button Grid.Row="1" Grid.Column="1" x:Name="btnValue1"   Style="{StaticResource ExampleButton}" Content="{Binding Number1}"  />
                     <Button Grid.Row="1" Grid.Column="2" x:Name="btnAction1" Margin="30"  Style="{StaticResource ExampleButton}" Content="{Binding Action1}" />
                     <Button Grid.Row="1" Grid.Column="3" x:Name="btnValue2"  Style="{StaticResource ExampleButton}" Content="{Binding Number2}"   />
                     <Button Grid.Row="1" Grid.Column="4" x:Name="btnAction2" Margin="30" Style="{StaticResource ExampleButton}" Content="{Binding Action2}" Visibility="{Binding IsVisibleSecondAction}" />

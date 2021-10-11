@@ -26,6 +26,7 @@ namespace StudyingFor6.Pages.Mathematics
         {
             InitializeComponent();
             player = new SoundPlayer();
+            Frame_info.Content = new Pages.InfoClassic();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,29 @@ namespace StudyingFor6.Pages.Mathematics
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             TextBoxInputResultExamples.Focus();
+        }
+
+        private void ModeMistakes_Click(object sender, RoutedEventArgs e)
+        {
+            Frame_info.Content = new Pages.InfoMistakes();
+        }
+
+        private void ModeClassic_Click(object sender, RoutedEventArgs e)
+        {
+            Frame_info.Content = new Pages.InfoClassic();
+
+        }
+
+        private void ModeTime_Click(object sender, RoutedEventArgs e)
+        {
+            Frame_info.Content = new Pages.InfoTime();
+
+        }
+
+        private void ModePoints_Click(object sender, RoutedEventArgs e)
+        {
+            Frame_info.Content = new Pages.InfoPoints();
+
         }
     }
 }

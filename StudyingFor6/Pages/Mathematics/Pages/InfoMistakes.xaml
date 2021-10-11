@@ -1,0 +1,42 @@
+﻿<Page x:Class="StudyingFor6.Pages.Mathematics.Pages.InfoMistakes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Mathematics.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource ExampleVM}"
+      Title="InfoMistakes">
+
+    <Grid>
+        <Grid Background="GhostWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Style="{StaticResource TitlesFieldsPages}"  Content="Статистика (режим на ошибки)" />
+            <Label Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Требуется выполнить примеров:"  />
+            <Label Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Количество верно выполненных примеров:"  />
+            <Label Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Количество неверно выполненных примеров:"  />
+            <Label Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Штраф за неверный ответ:"  />
+            <Label Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Количество разрешённых ошибок"  />
+            <Button x:Name="btnCorrectAnswer"   Grid.Row="1" Grid.Column="2" Style="{StaticResource OrangeButtonMini}" Content="{Binding  QuantityExamples}" />
+            <Button x:Name="btnInCorrectAnswer" Grid.Row="2" Grid.Column="2"  Style="{StaticResource OrangeButtonMini}" Content="{Binding QuantityCorrectAnswerModeMistake}" />
+            <Button x:Name="btnSkipExample"     Grid.Row="3" Grid.Column="2"  Style="{StaticResource OrangeButtonMini}" Content="{Binding QuantityInCorrectAnswerModeMistake}"  />
+            <Button x:Name="btnSkipwExample"     Grid.Row="4" Grid.Column="2"  Style="{StaticResource OrangeButtonMini}" Content="{Binding QuantityInCorrectAnswerModeMistake}"  />
+            <Button x:Name="btnSkipwExam3ple"     Grid.Row="5" Grid.Column="2"  Style="{StaticResource OrangeButtonMini}" Content="{Binding QuantityInCorrectAnswerModeMistake}"  />
+
+        </Grid>
+    </Grid>
+</Page>

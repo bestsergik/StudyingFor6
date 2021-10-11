@@ -1,0 +1,35 @@
+﻿<Page x:Class="StudyingFor6.Pages.Mathematics.Pages.InfoClassic"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StudyingFor6.Pages.Mathematics.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{StaticResource ExampleVM}"
+      Title="InfoClassic">
+
+    <Grid>
+        <Grid Background="GhostWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="20"></ColumnDefinition>
+                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Style="{StaticResource TitlesFieldsPages}"  Content="Статистика (классический режим)" />
+            <Label Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}"  Content="Количество верных ответов:"  />
+            <Label Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Количество неверных ответов:"  />
+            <Label Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource TitlesStandart}" Content="Количество пропущенных примеров:"  />
+            <Button x:Name="btnCorrectAnswer"   Grid.Row="2" Grid.Column="2" Style="{StaticResource OrangeButton}" Content="{Binding QuantityInCorrectAnswer}" />
+            <Button x:Name="btnInCorrectAnswer" Grid.Row="1" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantityCorrectAnswer}" />
+            <Button x:Name="btnSkipExample"     Grid.Row="3" Grid.Column="2"  Style="{StaticResource OrangeButton}" Content="{Binding QuantitySkipExample}"  />
+        </Grid>
+    </Grid>
+</Page>

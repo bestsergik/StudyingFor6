@@ -10,6 +10,11 @@ namespace StudyingFor6.Models
     {
         Random random = new Random();
 
+        enum ExampleModes
+        {
+           Classic, Mistakes, Time, Points
+        }
+
         string[] example;
         int?[] numbers;
         int?[] resultBlock;
@@ -17,6 +22,7 @@ namespace StudyingFor6.Models
         bool[] originalOperations = new bool[4];
         string[] operations;
         int? storedOperation;
+        
 
         int?[] randomPositions;
         bool tryAgain;
@@ -31,6 +37,8 @@ namespace StudyingFor6.Models
 
         internal string[] GetExample(int QuantityOperations, bool[] Operations, int MinPossibleResult, int MaxPossibleResult, bool IsZero)
         {
+            ExampleModes ExampleMode;
+            ExampleMode = ExampleModes.Classic;
             FillOriginalOperations(Operations);
             SetDefault();
             FillIncomingData(QuantityOperations, MinPossibleResult, MaxPossibleResult, IsZero);
@@ -51,6 +59,7 @@ namespace StudyingFor6.Models
 
         private void SetDefault()
         {
+
             resultBlock = new int?[3];
             numbers = new int?[4];
             resultBlocks = new int?[2];

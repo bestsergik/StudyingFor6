@@ -32,6 +32,9 @@ namespace StudyingFor6.ViewModels
         public ICommand IncreaseMaxPossibleResult { get; set; }
         public ICommand ChangeSetting { get; set; }
         public ICommand NextExample { get; set; }
+        public ICommand ISetMode { get; set; }
+
+        ActionCommand<string> _setMode;
 
         private string _number1;
         private string _number2;
@@ -50,6 +53,11 @@ namespace StudyingFor6.ViewModels
         private int _quantityCorrectAnswer = 0;
         private int _quantityInCorrectAnswer = 0;
         private int _quantitySkipExample = 0;
+        private int _quantityExamples = 10;
+        private int _quantityCorrectAnswerModeMistake = 0;
+        private int _quantityInCorrectAnswerModeMistake = 0;
+
+
         private int _positionEqual;
         private int _positionResult;
 
@@ -86,8 +94,28 @@ namespace StudyingFor6.ViewModels
           ReduceMaxPossibleResult = new RelayCommand(new Action<object>(ReduceResult));
           IncreaseMaxPossibleResult = new RelayCommand(new Action<object>(IncreaseResult));
           ChangeSetting = new RelayCommand(new Action<object>(ApplySetting));
-          NextExample = new RelayCommand(new Action<object>(FollowingExample));
+          NextExample = new RelayCommand(new Action<object>(FollowingExample));       
           GetNextExample();
+        }
+
+
+        public ActionCommand<string> SetModeCommand
+        {
+            get
+            {
+                if (_setMode == null)
+                {
+                    _setMode = new ActionCommand<string>(
+
+                        range => this.SetMode(range));
+                }
+                return _setMode;
+            }
+        }
+
+        private void SetMode(string range)
+        {
+            throw new NotImplementedException();
         }
 
         private void FollowingExample(object obj)
@@ -273,7 +301,6 @@ namespace StudyingFor6.ViewModels
 
         #endregion
 
-
         #region Actions Fields
         public string Action1
         {
@@ -371,6 +398,36 @@ namespace StudyingFor6.ViewModels
             {
                 _quantityInCorrectAnswer = value;
                 OnPropertyChanged("QuantityInCorrectAnswer");
+            }
+        }
+
+        public int QuantityExamples
+        {
+            get { return _quantityExamples; }
+            set
+            {
+                _quantityExamples = value;
+                OnPropertyChanged("QuantityExamples");
+            }
+        }
+
+        public int QuantityCorrectAnswerModeMistake
+        {
+            get { return _quantityCorrectAnswerModeMistake; }
+            set
+            {
+                _quantityCorrectAnswerModeMistake = value;
+                OnPropertyChanged("QuantityCorrectAnswerModeMistake");
+            }
+        }
+
+        public int QuantityInCorrectAnswerModeMistake
+        {
+            get { return _quantityInCorrectAnswerModeMistake; }
+            set
+            {
+                _quantityInCorrectAnswerModeMistake = value;
+                OnPropertyChanged("QuantityInCorrectAnswerModeMistake");
             }
         }
 
